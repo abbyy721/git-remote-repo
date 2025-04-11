@@ -42,8 +42,8 @@
    - 소스 코드를 업로드하여 AWS에서 자동 배포할 수 있도록 준비 (완료)
 
 3. **AWS 리소스 세팅**
-1) S3 버킷 생성 및 정적 웹 호스팅 설정
-- 버킷 이름 : smart-static-website-abby
+**1) S3 버킷 생성 및 정적 웹 호스팅 설정
+**- 버킷 이름 : smart-static-website-abby
 - 버킷 정책:
 - {
     "Version": "2012-10-17",
@@ -59,47 +59,32 @@
 }
 
   
-  2)  CloudFront 배포 생성 및 ACM 인증서 연결
-     🌍 CloudFront + HTTPS 보안 연결 구성
+**  2)  CloudFront 배포 생성 및 ACM 인증서 연결**     
+🌍 CloudFront + HTTPS 보안 연결 구성
 이 단계에서는 정적 웹사이트를 CloudFront를 통해 전 세계에 빠르게 전달하고,
 ACM 인증서를 활용해 HTTPS 보안 연결을 적용합니다.
 
 ✅ 1. SSL 인증서 생성 (AWS Certificate Manager)
 AWS Console에서 Certificate Manager (ACM) 이동
-
 [인증서 요청] → 공개 인증서 선택
-
 도메인 입력 (예: www.example.com)
-
 DNS 검증 선택
-
 제공된 CNAME 레코드를 DNS 설정에 추가
-
 인증서 상태가 발급됨(Issued)으로 바뀌면 완료
 
 ✅ 2. CloudFront 배포 생성
 AWS Console에서 CloudFront 이동 → [배포 만들기]
-
 설정 항목:
-
 오리진 도메인: S3 버킷 선택 또는 bucket-name.s3.amazonaws.com 입력
-
 기본 루트 객체: index.html
-
 프로토콜 정책: Redirect HTTP to HTTPS
-
 SSL 인증서: 앞서 발급받은 ACM 인증서 선택
-
 [배포 생성] 클릭 후 완료까지 수 분 소요
-
 배포 완료 후, 도메인 주소 예시:
-
 arduino
 코드 복사
 https://d123abcd.cloudfront.net
  
-
-
 
    - WAF 설정으로 보안 강화
    - CloudWatch를 통한 로깅 설정
