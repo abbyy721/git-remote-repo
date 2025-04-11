@@ -70,7 +70,7 @@
 ---
 ## 🚀 배포 결과
 
-- **URL**: [https://www.example.com](https://www.example.com)  
+- **URL**: [http://smart-static-website-abby.s3-website-us-east-1.amazonaws.com] 
 (실제 도메인이 있다면 여기에 링크)
 
 ---
