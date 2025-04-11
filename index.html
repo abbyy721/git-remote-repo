@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Static Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      color: #007acc;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: normal;
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto 30px auto;
+      text-align: left;
+    }
+    li {
+      font-size: 1.1rem;
+      background: white;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .emoji {
+      margin-right: 10px;
+    }
+    footer {
+      font-size: 0.95rem;
+      color: #888;
+    }
+    /* 화면이 600px 이하일 때 (스마트폰) */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+footer {
+  font-size: 0.85rem; /* Adjusted footer font size for better visibility */
+  color: #666; /* Darker color for footer text */
+  text-align: center; /* Centered footer text for better layout */
+  margin-top: 20px; /* Added margin for spacing above footer */
+  padding: 10px; /* Added padding for better spacing within footer */
+  border-top: 1px solid #ccc; /* Added border for footer separation */
+  background-color: #f9f9f9; /* Added background color for footer */
+}
+  </style>
+</head>
+<body>
+  <h1>Smart Static Website</h1>
+  <h2>보안(Security) · 속도(Speed) · 효율(Smartness)</h2>
+
+  <ul>
+    <li><span class="emoji">🔐</span> 해커의 공격을 막는 <strong>HTTPS 보안</strong></li>
+    <li><span class="emoji">⚡</span> 글로벌 유저도 빠르게 로딩되는 <strong>CDN 구성</strong></li>
+    <li><span class="emoji">💸</span> 예산 걱정 없는 <strong>AWS 프리티어 설정</strong></li>
+  </ul>
+
+  <footer>
+    지금, AWS로 스마트한 웹사이트 인프라를 구축 중입니다.
+  </footer>
+</body>
+</html>
