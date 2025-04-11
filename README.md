@@ -34,7 +34,40 @@
    - 배포 단계에서 S3로 자동 업로드 설정
 
 ---
+## 🛠 구축 순서 - 상세 및 진행상황
+1. **웹사이트 제작**
+   - `index.html` 파일을 이용해 정적 웹사이트 제작 (완료)
 
+2. **GitHub 리포지토리 생성**
+   - 소스 코드를 업로드하여 AWS에서 자동 배포할 수 있도록 준비 (완료)
+
+3. **AWS 리소스 세팅**
+1) S3 버킷 생성 및 정적 웹 호스팅 설정
+- 버킷 이름 : smart-static-website-abby
+- 버킷 정책:
+- {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::smart-static-website-abby/*"
+        }
+    ]
+}
+
+  
+   - CloudFront 배포 생성 및 ACM 인증서 연결
+   - WAF 설정으로 보안 강화
+   - CloudWatch를 통한 로깅 설정
+
+
+
+
+
+---
 ## 🚀 배포 결과
 
 - **URL**: [https://www.example.com](https://www.example.com)  
